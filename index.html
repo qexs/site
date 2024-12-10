@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moriarty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/180053074?v=4">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(-45deg, #2c3e50, #34495e, #7f8c8d, #95a5a6);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+            font-style: italic;
+        }
+        section {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+        h2 {
+            color: #2c3e50;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+            font-style: italic;
+        }
+        p {
+            font-weight: 300;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #34495e;
+        }
+        #music-player {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://avatars.githubusercontent.com/u/180053074?s=400&u=d0e6fb3b118306128e62a5c0780d6cfaf05ba54f&v=4" alt="qexs profile" class="profile-img">
+        <h1>qexs</h1>
+    </header>
+
+    <section>
+        <h2>Kimdir?</h2>
+        <p>qexs yazılımla, siber güvenlikle ilgilenen bir yandan da GPT prompter olan sevdiği diller py, sh, rb, c# olan birisidir. İlgi alanları film/dizi izlemektir.</p>
+    </section>
+
+    <section>
+        <h2>İletişim Bilgileri</h2>
+        <p>Herangi bir konuda sorunuz olursa aşağıdaki adreslerden ulaşabilirsiniz.</p>
+        <div class="contact-info">
+            <a href="https://discord.com/users/onemoriarty" target="_blank">Discord: onemoriarty</a>
+            <a href="" target="_blank">GitHub: - </a>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>kulakların müzik görsün :)</h2>
+        <audio id="music-player" controls>
+            <source src="https://ia803007.us.archive.org/29/items/tvtunes_23679/Sherlock%20-%20BBC%20-%20The%20Game%20Is%20On.mp3?cnt=0" type="audio/mpeg">
+            Tarayıcınız audio elementini desteklemiyor.
+        </audio>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const musicPlayer = document.getElementById('music-player');
+            musicPlayer.volume = 0.5;
+        });
+    </script>
+</body>
+</html>
